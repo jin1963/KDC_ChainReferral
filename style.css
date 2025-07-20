@@ -1,0 +1,70 @@
+/* style.css - ธีมดำทอง */
+
+body {
+  background-color: #111;
+  color: #FFD700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #FFD700;
+}
+
+button {
+  background-color: #FFD700;
+  color: #111;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #e5c100;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #FFD700;
+  background-color: #222;
+  color: #FFD700;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.status {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#refLinkSection {
+  margin-top: 15px;
+  display: none;
+}
+
+label {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+#estimatedKJC {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #FFA500;
+}
