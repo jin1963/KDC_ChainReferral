@@ -1,4 +1,4 @@
-// usdtAAbi.js
+// usdtAbi.js
 const usdtABI = [
   {
     "constant": false,
