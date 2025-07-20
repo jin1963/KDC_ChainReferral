@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>KJC Referral System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 KJC Referral System</h1>
+    <p id="wallet-status">❌ ยังไม่เชื่อมต่อกระเป๋า</p>
+    <button id="connectBtn">🔗 เชื่อมต่อกระเป๋า</button>
+
+    <hr>
+
+    <label>📩 Address ผู้นำแนะนำ:</label>
+    <input type="text" id="refAddress" placeholder="Referrer Address">
+    <button id="registerBtn">📌 สมัคร Referrer</button>
+
+    <hr>
+
+    <label>💸 จำนวน USDT ที่จะใช้ซื้อ:</label>
+    <input type="text" id="usdtAmount" placeholder="จำนวน USDT">
+    <button id="buyBtn">🎯 Purchase</button>
+
+    <hr>
+
+    <p>🔗 ลิงก์แนะนำของคุณ:</p>
+    <input type="text" id="ref-link" readonly>
+    <button id="copyRefBtn">📋 คัดลอกลิงก์</button>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="abi.js"></script>
+  <script src="usdtAbi.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
