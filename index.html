@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJC Referral System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>KJC Referral System</h1>
+
+        <div id="wallet-status">❌ การเชื่อมต่อล้มเหลว</div>
+        <button id="connectBtn">🔗 เชื่อมต่อกระเป๋า</button>
+
+        <hr>
+
+        <label>📩 ใส่ Address ผู้นำแนะนำ:</label>
+        <input type="text" id="refAddress" placeholder="Referrer Address">
+        <button id="registerBtn">📌 สมัคร Referrer</button>
+
+        <hr>
+
+        <label>💸 จำนวน USDT ที่จะใช้ซื้อ:</label>
+        <input type="text" id="usdtAmount" placeholder="ใส่จำนวน USDT">
+        <button id="buyBtn">🎯 Purchase</button>
+
+        <hr>
+
+        <label>🔗 ลิงก์ผู้นำแนะนำของคุณ:</label>
+        <input type="text" id="ref-link" readonly>
+        <button onclick="copyRef()">📋 คัดลอก</button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="abi.js"></script>
+    <script src="usdtAbi.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        function copyRef() {
+            const ref = document.getElementById("ref-link").value;
+            if (ref) {
+                navigator.clipboard.writeText(ref);
+                alert("คัดลอกลิงก์แล้ว!");
+            } else {
+                alert("ยังไม่มีลิงก์ Referrer");
+            }
+        }
+    </script>
+</body>
+</html>
